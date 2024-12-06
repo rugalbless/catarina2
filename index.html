@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Filmes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container">
+      <h1>Clube da Película</h1>
+    </div>
+  </header>
+<!-- Barra de pesquisa -->
+<div>
+  <form id="searchForm">
+    <label for="searchInput">Pesquisar Título ou Gênero:</label>
+    <input type="text" id="searchInput" placeholder="Digite o título ou gênero">
+    <button type="submit">Pesquisar</button>
+  </form>
+</div>
+
+<!-- Resultados da pesquisa -->
+<div class="resultados" id="resultados">
+  <h3>Resultados:</h3>
+  <div id="resultadosFilmes"></div>
+</div>
+  
+  <!-- Formulário de Adição de Filmes -->
+  <section id="form-section" class="form-section">
+    <div class="container">
+      <h2>Adicionar Filme</h2>
+      <form id="film-form">
+        <input type="text" id="title" placeholder="Título do Filme" required />
+        <input type="text" id="director" placeholder="Diretor" required />
+        <input type="number" id="year" placeholder="Ano de Lançamento" required />
+
+        <label for="movie-priority">Prioridade:</label>
+        <select id="movie-priority" required>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+
+        <label for="movie-status">Status:</label>
+        <select id="movie-status" required>
+          <option value="não-assistido">Não Assistido</option>
+          <option value="assistido">Assistido</option>
+        </select>
+
+        <label for="movie-genre">Gênero:</label>
+        <select id="movie-genre" required>
+          <option value="acao">Ação</option>
+          <option value="comedia">Comédia</option>
+          <option value="drama">Drama</option>
+          <option value="terror">Terror</option>
+          <option value="romance">Romance</option>
+          <option value="aventura">Aventura</option>
+          <option value="documentario">Documentário</option>
+          <option value="suspense">Suspense</option>
+          <option value="ficcao-cientifica">Ficção Científica</option>
+          <option value="animacao">Animação</option>
+          <option value="musical">Musical</option>
+          <option value="biografico">Biográfico</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Adicionar Filme</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Lista de Filmes Cadastrados -->
+  <section id="filmes" class="section-filmes">
+    <div class="container">
+      <h2>Filmes Cadastrados</h2>
+      <ul id="film-list" class="film-list">
+        <!-- Filmes serão adicionados aqui -->
+      </ul>
+    </div>
+  </section>
+  <div id="resultados"></div>
+
+  <!-- Filtros -->
+  <div class="filters">
+    <input type="text" id="searchName" placeholder="Pesquisar por nome">
+    <select id="filterGenre">
+      <option value="">Gênero</option>
+      <option value="Ação">Ação</option>
+      <option value="Comédia">Comédia</option>
+      <option value="Drama">Drama</option>
+      <option value="Ficção">Ficção</option>
+    </select>
+    <select id="filterStatus">
+      <option value="">Status</option>
+      <option value="Assistido">Assistido</option>
+      <option value="Não assistido">Não assistido</option>
+    </select>
+    <select id="filterRanking">
+      <option value="">Ranking</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button id="applyFilters">Aplicar Filtros</button>
+  </div>
+
+  <!-- Lista de filmes -->
+  <div id="moviesList"></div>
+</div>
+
+  <!-- Exibição de Comentários -->
+<section id="comentarios" class="section-comentarios">
+  <div class="container">
+    <h2>Comentários</h2>
+    <ul id="coment-list" class="coment-list">
+      <!-- Comentários serão adicionados aqui -->
+    </ul>
+  </div>
+</section>
+
+<!-- Exibição de Resultados (Usuários com Filmes Similares) -->
+<section id="resultados" class="section-resultados">
+  <div class="container">
+    <h2>Resultados de Usuários com Filmes Similares</h2>
+    <ul id="result-list" class="result-list">
+      <!-- Resultados serão adicionados aqui -->
+    </ul>
+  </div>
+</section>
+  
+  </script>
+  
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Clube da Película. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

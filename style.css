@@ -1,0 +1,143 @@
+/* Estilo base para telas grandes (computadores) */
+#searchForm {
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.resultados {
+  margin-top: 20px;
+}
+.filme {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilo básico para o botão */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Cor inicial */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para o botão quando desabilitado */
+button[disabled], .status-disabled {
+  background-color: #ddd;  /* Cor de fundo mais clara */
+  color: #777;  /* Cor do texto mais clara */
+  cursor: not-allowed;  /* Cursor de "não permitido" */
+}
+
+/* Estilo para quando o botão está desabilitado (também quando o status for 'assistido') */
+button[disabled]:hover, .status-disabled:hover {
+  background-color: #ddd;  /* Não muda a cor ao passar o mouse */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.filters {
+  margin-bottom: 20px;
+}
+.filters input, .filters select {
+  margin-right: 10px;
+  padding: 5px;
+}
+.movie {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.movie:last-child {
+  border-bottom: none;}
+
+/* Media Query para telas menores (exemplo: dispositivos móveis) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  form {
+    gap: 8px;
+  }
+
+  input, select, button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  input, select, button {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
